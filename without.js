@@ -13,8 +13,6 @@ const eqArrays = function (arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] === arr2[i]) {
       count++;
-    } else {
-      count = count;
     }
   }
   if (count === arr1.length) {
@@ -45,7 +43,7 @@ const without = function (arr1, arr2) {
       }
       j++;
     }
-    if (found === false) {
+    if (!found) {
       newArr.push(arr1[i]);
     }
     i++;
