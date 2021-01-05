@@ -14,12 +14,12 @@ const eqArrays = function (arr1, arr2) {
   }
 };
 
-const assertEqual = function (actual, expected) {
+const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
   } else {
     console.log(`❌❌❌ Assertion failed: ${actual} !== ${expected}`);
   }
 };
-assertEqual([1, 2, 3], [1, 2, 3]);
-assertEqual([1, 2, 3], [1, 2, "3"]);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [1, 2, "3"]);
