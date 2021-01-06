@@ -1,7 +1,3 @@
-/*
-Implement the definition for function eqObjects which will take in two objects and returns true or false, based on a perfect match.
-*/
-
 const sortArray = function (arr) {
   arr.sort((a, b) => a - b);
   return arr;
@@ -56,13 +52,23 @@ const eqObjects = function (object1, object2) {
   }
   return found;
 };
+const assertObjectsEqual = function (actual, expected) {
+  const inspect = require("util").inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(
+      `✅✅✅ Assertion passed: ${inspect(actual)} === ${inspect(expected)}`
+    );
+  } else {
+    console.log(
+      `❌❌❌ Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`
+    );
+  }
+};
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 const abc = { a: "1", b: "2", c: "3" };
 console.log(eqObjects(ab, ba));
 console.log(eqObjects(ab, abc));
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc));
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2));
+assertObjectsEqual(ab, ba);
+assertObjectsEqual(ab, abc);
