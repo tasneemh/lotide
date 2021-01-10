@@ -1,3 +1,4 @@
+/*
 const eqArrays = function (arr1, arr2) {
   count = 0;
   for (let i = 0; i < arr1.length; i++) {
@@ -19,7 +20,8 @@ const assertArraysEqual = function (actual, expected) {
     console.log(`❌❌❌ Assertion failed: ${actual} !== ${expected}`);
   }
 };
-const arr = [1, 2];
+*/
+//const arr = [1, 2];
 const middle = function (arr) {
   let newArr = [];
   let found = "odd";
@@ -44,6 +46,7 @@ const middle = function (arr) {
   }
   return newArr;
 };
+/*
 console.log(middle([1, 2]));
 console.log(middle([1, 2, 3, 4, 5]));
 console.log(middle([1]));
@@ -52,3 +55,5 @@ assertArraysEqual(middle([1, 2]), true);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), false);
 assertArraysEqual(middle([1]), true);
 assertArraysEqual(middle([1, 2, 3, 4]), false);
+*/
+module.exports = middle;
