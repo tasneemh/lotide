@@ -1,16 +1,19 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${actual} !== ${expected}`);
-  }
+const sortArray = function (arr) {
+  arr.sort((a, b) => a - b);
+  return arr;
 };
 const eqArrays = function (arr1, arr2) {
   count = 0;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      count++;
+  const sortedArray1 = sortArray(arr1);
+  const sortedArray2 = sortArray(arr2);
+  if (sortedArray1.length === sortedArray2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      if (sortedArray1[i] === sortedArray2[i]) {
+        count++;
+      }
     }
+  } else {
+    return false;
   }
 
   if (count === arr1.length) {
@@ -19,7 +22,5 @@ const eqArrays = function (arr1, arr2) {
     return false;
   }
 };
-console.log(eqArrays([1, 2, 3], [1, 2, "3"]));
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true);
+
+module.exports = eqArrays;
