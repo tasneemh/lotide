@@ -27,3 +27,4 @@ const data2 = [
 ];
 const results2 = takeUntil(data2, (x) => x === ",");
 console.log(results2);
+module.exports = takeUntil;

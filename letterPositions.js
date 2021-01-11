@@ -1,25 +1,3 @@
-const eqArrays = function (arr1, arr2) {
-  count = 0;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      count++;
-    }
-  }
-  if (count === arr1.length) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${actual} !== ${expected}`);
-  }
-};
-
 const removeSpaces = function (sentence) {
   sentence = sentence.split(" ").join("");
   return sentence;
@@ -40,6 +18,6 @@ const letterPositions = function (string) {
   }
   return result;
 };
-console.log(letterPositions("hello"));
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").o, [2]);
+//console.log(letterPositions("hello"));
+
+module.exports = letterPositions;

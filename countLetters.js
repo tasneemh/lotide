@@ -5,13 +5,6 @@ The function should take in a sentence (as a string) and then return a count of 
 
 For example, countLetters('LHL') should return results indicating that L appears twice, and H once.
 */
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${actual} !== ${expected}`);
-  }
-};
 
 //function to remove spaces from the string
 const removeSpaces = function (string) {
@@ -33,6 +26,7 @@ const countLetters = function (string) {
   return result;
 };
 const obj = countLetters("lighthouse in the house");
-assertEqual(obj["l"], 1);
-assertEqual(obj["h"], 4);
-assertEqual(obj["t"], 3);
+console.log(obj);
+const obj2 = countLetters("apple");
+console.log(obj2);
+module.exports = countLetters;

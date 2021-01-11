@@ -51,6 +51,7 @@ console.log(middle([1, 2]));
 console.log(middle([1, 2, 3, 4, 5]));
 console.log(middle([1]));
 console.log(middle([1, 2, 3, 4]));
+
 assertArraysEqual(middle([1, 2]), true);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), false);
 assertArraysEqual(middle([1]), true);
